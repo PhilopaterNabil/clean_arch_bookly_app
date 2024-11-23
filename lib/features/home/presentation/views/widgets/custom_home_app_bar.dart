@@ -9,23 +9,27 @@ class CustomHomeAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Image.asset(
-          Asssets.logo,
-          height: 18.h,
-          width: 75.w,
-        ),
-        const Spacer(),
-        IconButton(
-          onPressed: () {},
-          icon: Icon(
-            FontAwesomeIcons.magnifyingGlass,
-            color: ColorManager.whiteColor,
-            size: 24.sp,
+    return Padding(
+      padding:
+          EdgeInsets.only(left: 24.w, right: 24.w, top: 44.h, bottom: 20.h),
+      child: Row(
+        children: [
+          Image.asset(
+            Asssets.logo,
+            height: 18.h,
+            width: 75.w,
           ),
-        ),
-      ],
+          const Spacer(),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              FontAwesomeIcons.magnifyingGlass,
+              color: ColorManager.whiteColor,
+              size: 24.sp,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
