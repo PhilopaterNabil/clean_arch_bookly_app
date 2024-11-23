@@ -8,16 +8,17 @@ class FeaturedListViewItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 224.h,
-      width: 150.w,
-      decoration: BoxDecoration(
-        image: const DecorationImage(
-          fit: BoxFit.cover,
-          image: AssetImage(Asssets.kBookImage),
+    return AspectRatio(
+      aspectRatio: 2.7 / 4,
+      child: Container(
+        decoration: BoxDecoration(
+          image: const DecorationImage(
+            fit: BoxFit.cover,
+            image: AssetImage(Asssets.kBookImage),
+          ),
+          borderRadius: BorderRadius.circular(16.r),
+          color: ColorManager.whiteColor,
         ),
-        borderRadius: BorderRadius.circular(16.r),
-        color: ColorManager.whiteColor,
       ),
     );
   }
