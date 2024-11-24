@@ -1,8 +1,10 @@
 import 'package:clean_arch_bookly_app/core/helpers/spacing.dart';
+import 'package:clean_arch_bookly_app/features/home/presentation/views/widgets/book_details_action.dart';
 import 'package:clean_arch_bookly_app/features/home/presentation/views/widgets/custom_book_details_app_bar.dart';
 import 'package:clean_arch_bookly_app/features/home/presentation/views/widgets/custom_book_details_image.dart';
 import 'package:clean_arch_bookly_app/features/home/presentation/views/widgets/custom_book_details_tiltle_and_subtitle.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
@@ -20,6 +22,8 @@ class BookDetailsViewBody extends StatelessWidget {
             const CustomBookDetailsImage(),
             verticalSpace(43),
             const CustomBookDetailsTiltleAndSubtitle(),
+            verticalSpace(37),
+            const BookDetailsAction(),
           ],
         ),
       ),

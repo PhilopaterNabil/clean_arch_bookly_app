@@ -28,6 +28,12 @@ abstract class Styles {
     color: ColorManager.whiteColor,
   );
 
+  static TextStyle font16BoldWhite = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.bold,
+    color: ColorManager.whiteColor,
+  );
+
   static TextStyle font18MediumWhite = TextStyle(
     fontSize: 18.sp,
     fontStyle: FontStyle.italic,
@@ -41,10 +47,10 @@ abstract class Styles {
     color: ColorManager.whiteColor,
   );
 
-  static TextStyle font18BoldWhite = TextStyle(
+  static TextStyle font18BoldBlack = TextStyle(
     fontSize: 18.sp,
     fontWeight: FontWeight.bold,
-    color: ColorManager.whiteColor,
+    color: ColorManager.blackColor,
   );
 
   static TextStyle font20RegularWhite = TextStyle(
