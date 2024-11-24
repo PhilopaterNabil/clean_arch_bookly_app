@@ -30,6 +30,7 @@ abstract class Styles {
 
   static TextStyle font18MediumWhite = TextStyle(
     fontSize: 18.sp,
+    fontStyle: FontStyle.italic,
     fontWeight: FontWeight.w500,
     color: ColorManager.whiteColor.withOpacity(0.7),
   );
@@ -59,9 +60,10 @@ abstract class Styles {
     color: ColorManager.whiteColor,
   );
 
-  static TextStyle font30RegularWhite = TextStyle(
+  static TextStyle font30BoldWhite = TextStyle(
     fontSize: 30.sp,
-    fontWeight: FontWeight.normal,
+    fontWeight: FontWeight.bold,
     color: ColorManager.whiteColor,
+    fontFamily: Constants.kGtSectraFine,
   );
 }
