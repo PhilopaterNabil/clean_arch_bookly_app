@@ -26,7 +26,7 @@ class BookDetailsViewBody extends StatelessWidget {
             verticalSpace(30),
             const BookDetailsAction(),
             verticalSpace(36),
-            const SimilarBooksListView()
+            const SimilarBooksListView(),
           ],
         ),
       ),
