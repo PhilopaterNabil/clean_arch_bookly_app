@@ -45,10 +45,12 @@ class ServerFailure extends Failure {
         case 404:
           return ServerFailure('Your request not found, Please try later!');
         case 500:
-          return ServerFailure('There is a problem with the server, Please try later!');
+          return ServerFailure(
+              'There is a problem with the server, Please try later!');
       }
     }
-    return ServerFailure('There is a problem with the server, Please try later!');
+    return ServerFailure(
+        'There is a problem with the server, Please try later!');
   }
 }
 
