@@ -9,7 +9,9 @@ class CustomBookDetailsImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 243.h,
-      child: const CustomBookItem(),
+      child: const CustomBookItem(
+        image: '',
+      ),
     );
   }
 }
