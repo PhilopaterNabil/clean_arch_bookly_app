@@ -1,7 +1,6 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:clean_arch_bookly_app/core/helpers/spacing.dart';
 import 'package:clean_arch_bookly_app/core/utils/app_router.dart';
-import 'package:clean_arch_bookly_app/core/utils/asssets.dart';
-import 'package:clean_arch_bookly_app/core/utils/color_manager.dart';
 import 'package:clean_arch_bookly_app/core/utils/styles.dart';
 import 'package:clean_arch_bookly_app/features/home/presentation/views/widgets/book_rating.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +8,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
 class BestSellerListViewItem extends StatelessWidget {
-  const BestSellerListViewItem({super.key});
+  const BestSellerListViewItem({super.key, required this.image});
+
+  final String image;
 
   @override
   Widget build(BuildContext context) {
@@ -23,16 +24,23 @@ class BestSellerListViewItem extends StatelessWidget {
             children: [
               AspectRatio(
                 aspectRatio: 2.5 / 4,
-                child: Container(
-                  decoration: BoxDecoration(
-                    image: const DecorationImage(
-                      fit: BoxFit.cover,
-                      image: AssetImage(Asssets.kBookImage),
-                    ),
-                    borderRadius: BorderRadius.circular(8.r),
-                    color: ColorManager.whiteColor,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(8.r),
+                  child: CachedNetworkImage(
+                    imageUrl: image,
+                    fit: BoxFit.cover,
                   ),
                 ),
+                // Container(
+                //   decoration: BoxDecoration(
+                //     image: const DecorationImage(
+                //       fit: BoxFit.cover,
+                //       image: AssetImage(Asssets.kBookImage),
+                //     ),
+                //     borderRadius: BorderRadius.circular(8.r),
+                //     color: ColorManager.whiteColor,
+                //   ),
+                // ),
               ),
               horizontalSpace(30),
               Expanded(

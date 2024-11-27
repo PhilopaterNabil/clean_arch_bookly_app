@@ -5,11 +5,11 @@ import 'package:clean_arch_bookly_app/features/home/domain/entities/book_entity.
 import 'package:clean_arch_bookly_app/features/home/domain/repos/home_repo.dart';
 import 'package:dartz/dartz.dart';
 
-class FetchFeaturedBooksUseCase extends UseCase<List<BookEntity>, NoParam> {
+class FetchFeaturedBooksUseCase extends UseCase<List<BookEntity>, int> {
   final HomeRepo homeRepo = HomeRepoImpl();
 
   @override
-  Future<Either<Failure, List<BookEntity>>> call([NoParam? param]) async {
-    return await homeRepo.fetchFeaturedBooks();
+  Future<Either<Failure, List<BookEntity>>> call([int param = 0]) async {
+    return await homeRepo.fetchFeaturedBooks(pageNumber: param);
   }
 }
