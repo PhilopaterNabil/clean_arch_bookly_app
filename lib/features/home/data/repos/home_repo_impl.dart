@@ -7,11 +7,8 @@ import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 
 class HomeRepoImpl extends HomeRepo {
-  final HomeRemoteDataSource homeRemoteDataSource;
-  final HomeLocalDataSource homeLocalDataSource;
-
-  HomeRepoImpl(
-      {required this.homeRemoteDataSource, required this.homeLocalDataSource});
+  final HomeRemoteDataSource homeRemoteDataSource = HomeRemoteDataSourceImpl();
+  final HomeLocalDataSource homeLocalDataSource = HomeLocalDataSourceImpl();
 
   @override
   Future<Either<Failure, List<BookEntity>>> fetchFeaturedBooks() async {

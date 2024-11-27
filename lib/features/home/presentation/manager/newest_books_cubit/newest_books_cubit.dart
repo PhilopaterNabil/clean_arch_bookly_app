@@ -6,9 +6,10 @@ import 'package:meta/meta.dart';
 part 'newest_books_state.dart';
 
 class NewestBooksCubit extends Cubit<NewestBooksState> {
-  NewestBooksCubit(this.fetchNewestBooksUseCase) : super(NewestBooksInitial());
+  NewestBooksCubit() : super(NewestBooksInitial());
 
-  final FetchNewestBooksUseCase fetchNewestBooksUseCase;
+  final FetchNewestBooksUseCase fetchNewestBooksUseCase =
+      FetchNewestBooksUseCase();
   Future<void> fetchNewestBooks() async {
     emit(NewestBooksLoading());
 
